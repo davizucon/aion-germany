@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.dataholders.loadingutils.XmlDataLoader;
 import com.aionemu.gameserver.model.templates.mail.Mails;
+import pirate.events.xml.EventsData;
 
 /**
  * This class is holding whole static data, that is loaded from /data/static_data directory.<br>
@@ -147,6 +148,7 @@ public final class DataManager {
 	public static SkillSkinData SKILL_SKIN_DATA;
 	public static EventsWindowData EVENTS_WINDOW;
 	public static ItemSkillEnhanceData ITEM_SKILL_ENHANCE_DATA;
+	public static EventsData F14_EVENTS_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -279,6 +281,7 @@ public final class DataManager {
 		SKILL_SKIN_DATA = data.skillSkinData;
 		EVENTS_WINDOW = data.eventsWindow;
 		ITEM_SKILL_ENHANCE_DATA = data.itemSkillEnhance;
+		F14_EVENTS_DATA = data.f14_eventsData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

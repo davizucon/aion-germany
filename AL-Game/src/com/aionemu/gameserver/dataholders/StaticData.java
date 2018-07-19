@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.aionemu.gameserver.model.templates.mail.Mails;
+import pirate.events.xml.EventsData;
 
 /**
  * An instance of this class is the result of data loading.
@@ -259,6 +260,9 @@ public class StaticData {
 	public EventsWindowData eventsWindow;
     @XmlElement(name = "item_skill_enhances")
     public ItemSkillEnhanceData itemSkillEnhance;
+	@XmlElement(name="events")
+	public EventsData f14_eventsData;
+
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -377,5 +381,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");
 		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window entries");
 		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
+		DataManager.log.info("[DataManager] Loaded " + f14_eventsData.size() + " event engine holders.");
 	}
 }
