@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AL-Chat/AL-Chat.iml" filepath="$PROJECT_DIR$/../AL-Chat/AL-Chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AL-Login/AL-Login.iml" filepath="$PROJECT_DIR$/../AL-Login/AL-Login.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aion-German-Emulator.iml" filepath="$PROJECT_DIR$/Aion-German-Emulator.iml" />
     </modules>
   </component>
