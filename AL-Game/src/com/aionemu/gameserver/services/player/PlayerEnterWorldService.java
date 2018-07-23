@@ -89,7 +89,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_JOIN_REQUEST_LIST;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_LUCKY_DICE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MACRO_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
@@ -115,6 +114,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_7E;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_A5;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_BD;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_FD;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_YOUTUBE_VIDEO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.AccessLevelEnum;
@@ -145,6 +145,7 @@ import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.events.EventWindowService;
+import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
@@ -626,11 +627,14 @@ public final class PlayerEnterWorldService {
 			// SM_TERRITORY_LIST
 			TerritoryService.getInstance().onEnterWorld(player);
 			
+			client.sendPacket(new SM_YOUTUBE_VIDEO());
+			
 			// SM_UNK_12B
 			// client.sendPacket(new SM_UNK_12B()); // TODO - Null Pointer after Login
 
 			// SM_BOOST_EVENTS (new with Aion 5.1)
 			BoostEventService.getInstance().sendPacket(player); // TODO
+//			client.sendPacket(new SM_EVENT_BUFF(player, 2)); // TODO
 			
 			// SM_UNK_60
 			client.sendPacket(new SM_UNK_60()); // TODO
@@ -638,8 +642,8 @@ public final class PlayerEnterWorldService {
 			// SM_MAIL_SERVICE
 			MailService.getInstance().onPlayerLogin(player);
 
-			// SM_LUCKY_DICE (new with Aion 5.1)
-			client.sendPacket(new SM_LUCKY_DICE(1)); // TODO
+			// SM_SHUGO_SWEEP
+			ShugoSweepService.getInstance().onLogin(player);
 
 			// SM_ATREIAN_PASSPORT
 			AtreianPassportService.getInstance().onLogin(player);
