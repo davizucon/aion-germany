@@ -393,11 +393,13 @@ CREATE TABLE `inventory` (
   `buff_skill` int(11) NOT NULL DEFAULT '0',
   `reduction_level` int(11) NOT NULL,
   `luna_reskin` tinyint(1) NOT NULL DEFAULT '0',
+  `isEnhance` tinyint(1) NOT NULL DEFAULT '0',
+  `enhanceSkillId` int(11) NOT NULL DEFAULT '0',
+  `enhanceSkillEnchant` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`item_unique_id`),
   KEY `item_location` (`item_location`) USING HASH,
   KEY `index3` (`item_owner`,`item_location`,`is_equiped`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 -- ----------------------------
 -- Records of inventory
 -- ----------------------------

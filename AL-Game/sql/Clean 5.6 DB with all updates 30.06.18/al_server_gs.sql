@@ -241,6 +241,7 @@ DROP TABLE IF EXISTS `f2paccount`;
 CREATE TABLE `f2paccount` (
   `player_id` int(11) NOT NULL,
   `time` int(11) NOT NULL,
+  `account_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`player_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -938,11 +939,12 @@ CREATE TABLE `player_equipment_setting` (
 DROP TABLE IF EXISTS `player_events_window`;
 CREATE TABLE `player_events_window` (
   `account_id` int(11) NOT NULL DEFAULT '0',
-  `event_id` int(11) DEFAULT NULL,
+  `event_id` int(11) NOT NULL DEFAULT '0',
   `last_stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `elapsed` double(11,0) DEFAULT '0',
-  PRIMARY KEY (`account_id`)
+  PRIMARY KEY (`account_id`,`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- ----------------------------
 -- Records of player_events_window
