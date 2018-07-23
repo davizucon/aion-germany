@@ -270,6 +270,10 @@ public abstract class EffectTemplate {
 		return null;
 	}
 
+
+	public void setDuration(int newDuration) {
+		this.duration2 = newDuration;
+	}
 	/**
 	 * @return the effectType
 	 */

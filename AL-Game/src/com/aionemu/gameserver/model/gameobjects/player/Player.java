@@ -1,29 +1,20 @@
 /**
  * This file is part of Aion-Lightning <aion-lightning.org>.
- *
- *  Aion-Lightning is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Aion-Lightning is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details. *
- *  You should have received a copy of the GNU General Public License
- *  along with Aion-Lightning.
- *  If not, see <http://www.gnu.org/licenses/>.
+ * <p>
+ * Aion-Lightning is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p>
+ * Aion-Lightning is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details. *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Lightning.
+ * If not, see <http://www.gnu.org/licenses/>.
  */
 package com.aionemu.gameserver.model.gameobjects.player;
-
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ScheduledFuture;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
@@ -41,28 +32,14 @@ import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerVarsDAO;
 import com.aionemu.gameserver.dao.PlayerWorldBanDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
-import com.aionemu.gameserver.model.Gender;
-import com.aionemu.gameserver.model.PlayerClass;
-import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.TribeClass;
-import com.aionemu.gameserver.model.WorldBuff;
+import com.aionemu.gameserver.model.*;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.actions.PlayerActions;
 import com.aionemu.gameserver.model.actions.PlayerMode;
 import com.aionemu.gameserver.model.cp.PlayerCPList;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeList;
 import com.aionemu.gameserver.model.event_window.PlayerEventWindowList;
-import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.CreatureType;
-import com.aionemu.gameserver.model.gameobjects.Item;
-import com.aionemu.gameserver.model.gameobjects.Kisk;
-import com.aionemu.gameserver.model.gameobjects.Minion;
-import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.PersistentState;
-import com.aionemu.gameserver.model.gameobjects.Pet;
-import com.aionemu.gameserver.model.gameobjects.Summon;
-import com.aionemu.gameserver.model.gameobjects.SummonedObject;
-import com.aionemu.gameserver.model.gameobjects.Trap;
+import com.aionemu.gameserver.model.gameobjects.*;
 import com.aionemu.gameserver.model.gameobjects.player.AbyssRank.AbyssRankUpdateType;
 import com.aionemu.gameserver.model.gameobjects.player.FriendList.Status;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
@@ -129,9 +106,12 @@ import com.aionemu.gameserver.utils.rates.RegularRates;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
-
 import javolution.util.FastList;
 import javolution.util.FastMap;
+
+import java.sql.Timestamp;
+import java.util.*;
+import java.util.concurrent.ScheduledFuture;
 
 /**
  * This class is representing Player object, it contains all needed data.
@@ -146,6 +126,9 @@ public class Player extends Creature {
 
 	public RideInfo ride;
 	public InRoll inRoll;
+	private int arenaRound = 0;
+	private int arenaCode = 0;
+	private int KSLevel = 0; // killing streak level
 	public WindstreamPath windstreamPath;
 	private PlayerAppearance playerAppearance;
 	private PlayerAppearance savedPlayerAppearance;
@@ -154,16 +137,19 @@ public class Player extends Creature {
 	private LegionMember legionMember;
 	private MacroList macroList;
 	private PlayerSkillList skillList;
+	private boolean isInFFA = false;
 	private FriendList friendList;
 	private BlockList blockList;
 	private PetList toyPetList;
 	private MinionList minionList;
 	private Mailbox mailbox;
 	private PrivateStore store;
+	private boolean isInDuelArena = false;
 	private TitleList titleList;
 	private QuestStateList questStateList;
 	private RecipeList recipeList;
 	private List<House> houses;
+	private int specialKills; // kill cout
 	private ResponseRequester requester;
 	private boolean lookingForGroup = false;
 	private boolean lookingForEvent = false;
@@ -234,6 +220,7 @@ public class Player extends Creature {
 	private Map<Integer, MaxCountOfDay> maxCountEvent;
 	private int LunaDiceGame;
 	private int LunaDiceGameTry = 0;
+	private boolean isInPkMode;
 	/**
 	 * Static information for players
 	 */
@@ -332,6 +319,8 @@ public class Player extends Creature {
 	 * Player Event Window List
 	 */
 	private PlayerEventWindowList eventWindowList;
+	private boolean arenaTie = false;
+	private int winCount = 0;
 
 	/**
 	 * Player Event Window List
@@ -431,8 +420,7 @@ public class Player extends Creature {
 	/**
 	 * Only use for the Size admin command
 	 *
-	 * @param playerAppearance
-	 *            PlayerAppearance : The saved player's appearance, to rollback his appearance
+	 * @param playerAppearance PlayerAppearance : The saved player's appearance, to rollback his appearance
 	 */
 	public void setSavedPlayerAppearance(PlayerAppearance savedPlayerAppearance) {
 		this.savedPlayerAppearance = savedPlayerAppearance;
@@ -480,14 +468,13 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param toyPet
-	 *            the toyPet to set
+	 * @param toyPet the toyPet to set
 	 */
 	public void setToyPet(Pet toyPet) {
 		this.toyPet = toyPet;
 	}
 
- 	/**
+	/**
 	 * @return the minions
 	 */
 	public Minion getMinion() {
@@ -699,8 +686,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param store
-	 *            the store that needs to be set
+	 * @param store the store that needs to be set
 	 */
 	public void setStore(PrivateStore store) {
 		this.store = store;
@@ -714,8 +700,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param questStateList
-	 *            the QuestStateList to set
+	 * @param questStateList the QuestStateList to set
 	 */
 	public void setQuestStateList(QuestStateList questStateList) {
 		this.questStateList = questStateList;
@@ -729,8 +714,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param playerStatsTemplate
-	 *            the playerStatsTemplate to set
+	 * @param playerStatsTemplate the playerStatsTemplate to set
 	 */
 	public void setPlayerStatsTemplate(PlayerStatsTemplate playerStatsTemplate) {
 		this.playerStatsTemplate = playerStatsTemplate;
@@ -745,8 +729,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param inventory
-	 *            the inventory to set Inventory should be set right after player object is created
+	 * @param inventory the inventory to set Inventory should be set right after player object is created
 	 */
 	public void setStorage(Storage storage, StorageType storageType) {
 		if (storageType == StorageType.CUBE) {
@@ -908,8 +891,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param playerSettings
-	 *            the playerSettings to set
+	 * @param playerSettings the playerSettings to set
 	 */
 	public void setPlayerSettings(PlayerSettings playerSettings) {
 		this.playerSettings = playerSettings;
@@ -952,8 +934,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param abyssRank
-	 *            the abyssRank to set
+	 * @param abyssRank the abyssRank to set
 	 */
 	public void setAbyssRank(AbyssRank abyssRank) {
 		this.abyssRank = abyssRank;
@@ -981,8 +962,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param legionMember
-	 *            the legionMember to set
+	 * @param legionMember the legionMember to set
 	 */
 	public void setLegionMember(LegionMember legionMember) {
 		this.legionMember = legionMember;
@@ -1061,8 +1041,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param rates
-	 *            the rates to set
+	 * @param rates the rates to set
 	 */
 	public void setRates(Rates rates) {
 		this.rates = rates;
@@ -1101,8 +1080,7 @@ public class Player extends Creature {
 		this.flyState = flyState;
 		if (flyState == 1) {
 			setFlyingMode(true);
-		}
-		else if (flyState == 0) {
+		} else if (flyState == 0) {
 			setFlyingMode(false);
 		}
 	}
@@ -1115,8 +1093,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param isTrading
-	 *            the isTrading to set
+	 * @param isTrading the isTrading to set
 	 */
 	public void setTrading(boolean isTrading) {
 		this.isTrading = isTrading;
@@ -1130,8 +1107,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param prisonTimer
-	 *            the prisonTimer to set
+	 * @param prisonTimer the prisonTimer to set
 	 */
 	public void setPrisonTimer(long prisonTimer) {
 		if (prisonTimer < 0) {
@@ -1156,8 +1132,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param start
-	 *            : The time in ms of start prison
+	 * @param start : The time in ms of start prison
 	 */
 	public void setStartPrison(long start) {
 		this.startPrison = start;
@@ -1182,8 +1157,7 @@ public class Player extends Creature {
 	/**
 	 * Sets invul on player
 	 *
-	 * @param invul
-	 *            - boolean
+	 * @param invul - boolean
 	 */
 	public void setInvul(boolean invul) {
 		this.invul = invul;
@@ -1205,8 +1179,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param flyController
-	 *            the flyController to set
+	 * @param flyController the flyController to set
 	 */
 	public void setFlyController(FlyController flyController) {
 		this.flyController = flyController;
@@ -1264,8 +1237,7 @@ public class Player extends Creature {
 		this.flyLocationId = path;
 		if (path != null) {
 			this.flyStartTime = System.currentTimeMillis();
-		}
-		else {
+		} else {
 			this.flyStartTime = 0;
 		}
 	}
@@ -1319,14 +1291,13 @@ public class Player extends Creature {
 	public boolean isEnemyFrom(Player enemy) {
 		if (this.getObjectId() == enemy.getObjectId()) {
 			return false;
-		}
-		else if ((this.getAdminEnmity() > 1 || enemy.getAdminEnmity() > 1)) {
+		} else if ((this.getAdminEnmity() > 1 || enemy.getAdminEnmity() > 1)) {
 			return false;
-		}
-		else if (canPvP(enemy) || this.getController().isDueling(enemy)) {
+		} else if (canPvP(enemy) || this.getController().isDueling(enemy)) {
 			return true;
-		}
-		else {
+		} else if (enemy.isInFFA() && this.isInFFA()) {
+			return true;
+		} else {
 			return false;
 		}
 	}
@@ -1343,35 +1314,33 @@ public class Player extends Creature {
 		if (!enemy.getRace().equals(getRace())) {
 			if (World.getInstance().getWorldMap(getWorldId()).isPvpAllowed()) {
 				return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());
-			}
-			else {
+			} else {
 				return (this.isInPvPZone() && enemy.isInPvPZone());
 			}
-		}
-		else {
+		} else {
 			if (worldId != 210020000 && // Elten.
-				worldId != 210040000 && // Heiron.
-				worldId != 210050000 && // Inggison.
-				worldId != 210060000 && // Theobomos.
-				worldId != 210070000 && // Cygnea.
-				worldId != 210100000 && // Iluma.
-				worldId != 220020000 && // Morheim.
-				worldId != 220040000 && // Beluslan.
-				worldId != 220050000 && // Brusthonin.
-				worldId != 220070000 && // Gelkmaros.
-				worldId != 220080000 && // Enshar.
-				worldId != 220110000 && // Norsvold.
-				// \\//\\//\\//\\//\\//
-				worldId != 400010000 && // Reshanta.
-				// \\//Panesterra//\\//
-				worldId != 400020000 && // Belus.
-				worldId != 400040000 && // Aspida.
-				worldId != 400050000 && // Atanatos.
-				worldId != 400060000 && // Disillon.
-				// \\//\\//\\//\\//\\//
-				worldId != 600010000 && // Silentera Canyon.
-				worldId != 600090000 && // Kaldor.
-				worldId != 600100000) { // Levinshor.
+					worldId != 210040000 && // Heiron.
+					worldId != 210050000 && // Inggison.
+					worldId != 210060000 && // Theobomos.
+					worldId != 210070000 && // Cygnea.
+					worldId != 210100000 && // Iluma.
+					worldId != 220020000 && // Morheim.
+					worldId != 220040000 && // Beluslan.
+					worldId != 220050000 && // Brusthonin.
+					worldId != 220070000 && // Gelkmaros.
+					worldId != 220080000 && // Enshar.
+					worldId != 220110000 && // Norsvold.
+					// \\//\\//\\//\\//\\//
+					worldId != 400010000 && // Reshanta.
+					// \\//Panesterra//\\//
+					worldId != 400020000 && // Belus.
+					worldId != 400040000 && // Aspida.
+					worldId != 400050000 && // Atanatos.
+					worldId != 400060000 && // Disillon.
+					// \\//\\//\\//\\//\\//
+					worldId != 600010000 && // Silentera Canyon.
+					worldId != 600090000 && // Kaldor.
+					worldId != 600100000) { // Levinshor.
 				return (this.isInsideZoneType(ZoneType.PVP) && enemy.isInsideZoneType(ZoneType.PVP) && !isInSameTeam(enemy));
 			}
 		}
@@ -1401,11 +1370,9 @@ public class Player extends Creature {
 	public boolean isInSameTeam(Player player) {
 		if (isInGroup2() && player.isInGroup2()) {
 			return getPlayerGroup2().getTeamId().equals(player.getPlayerGroup2().getTeamId());
-		}
-		else if (isInAlliance2() && player.isInAlliance2()) {
+		} else if (isInAlliance2() && player.isInAlliance2()) {
 			return getPlayerAlliance2().getObjectId().equals(player.getPlayerAlliance2().getObjectId());
-		}
-		else if (isInLeague() && player.isInLeague()) {
+		} else if (isInLeague() && player.isInLeague()) {
 			return getPlayerAllianceGroup2().getObjectId().equals(player.getPlayerAllianceGroup2().getObjectId());
 		}
 		return false;
@@ -1454,8 +1421,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param summon
-	 *            the summon to set
+	 * @param summon the summon to set
 	 */
 	public void setSummon(Summon summon) {
 		this.summon = summon;
@@ -1469,16 +1435,14 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param summonedObj
-	 *            the summoned object to set
+	 * @param summonedObj the summoned object to set
 	 */
 	public void setSummonedObj(SummonedObject<?> summonedObj) {
 		this.summonedObj = summonedObj;
 	}
 
 	/**
-	 * @param new
-	 *            kisk to bind to (null if unbinding)
+	 * @param new kisk to bind to (null if unbinding)
 	 */
 	public void setKisk(Kisk newKisk) {
 		this.kisk = newKisk;
@@ -1560,8 +1524,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param isGagged
-	 *            the isGagged to set
+	 * @param isGagged the isGagged to set
 	 */
 	public void setGagged(boolean isGagged) {
 		this.isGagged = isGagged;
@@ -1785,8 +1748,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param dualEffectValue
-	 *            the dualEffectValue to set
+	 * @param dualEffectValue the dualEffectValue to set
 	 */
 	public void setDualEffectValue(int dualEffectValue) {
 		this.dualEffectValue = dualEffectValue;
@@ -1800,16 +1762,14 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param the
-	 *            Resurrection Positional State to set
+	 * @param the Resurrection Positional State to set
 	 */
 	public void setResPosState(boolean value) {
 		this.isInResurrectPosState = value;
 	}
 
 	/**
-	 * @param the
-	 *            Resurrection Positional X value to set
+	 * @param the Resurrection Positional X value to set
 	 */
 	public void setResPosX(float value) {
 		this.resPosX = value;
@@ -1823,8 +1783,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param the
-	 *            Resurrection Positional Y value to set
+	 * @param the Resurrection Positional Y value to set
 	 */
 	public void setResPosY(float value) {
 		this.resPosY = value;
@@ -1838,8 +1797,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param the
-	 *            Resurrection Positional Z value to set
+	 * @param the Resurrection Positional Z value to set
 	 */
 	public void setResPosZ(float value) {
 		this.resPosZ = value;
@@ -1888,8 +1846,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param the
-	 *            status of NoFpConsum Effect
+	 * @param the status of NoFpConsum Effect
 	 */
 	public void setUnderNoFPConsum(boolean value) {
 		this.underNoFPConsum = value;
@@ -1932,8 +1889,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param emotions
-	 *            The emotions to set.
+	 * @param emotions The emotions to set.
 	 */
 	public void setEmotions(EmotionList emotions) {
 		this.emotions = emotions;
@@ -2027,8 +1983,7 @@ public class Player extends Creature {
 	public byte isPlayer() {
 		if (this.isGM()) {
 			return 2;
-		}
-		else {
+		} else {
 			return 1;
 		}
 	}
@@ -2041,8 +1996,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param motions
-	 *            the motions to set
+	 * @param motions the motions to set
 	 */
 	public void setMotions(MotionList motions) {
 		this.motions = motions;
@@ -2064,8 +2018,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param npcFactions
-	 *            the npcFactions to set
+	 * @param npcFactions the npcFactions to set
 	 */
 	public void setNpcFactions(NpcFactions npcFactions) {
 		this.npcFactions = npcFactions;
@@ -2079,16 +2032,14 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param flyReuseTime
-	 *            the flyReuseTime to set
+	 * @param flyReuseTime the flyReuseTime to set
 	 */
 	public void setFlyReuseTime(long flyReuseTime) {
 		this.flyReuseTime = flyReuseTime;
 	}
 
 	/**
-	 * @param the
-	 *            flying mode flag to set
+	 * @param the flying mode flag to set
 	 */
 	public void setFlyingMode(boolean value) {
 		this.isFlying = value;
@@ -2290,8 +2241,7 @@ public class Player extends Creature {
 	public void setLastMessageTime() {
 		if ((System.currentTimeMillis() - lastMsgTime) / 1000 < SecurityConfig.FLOOD_DELAY) {
 			floodMsgCount++;
-		}
-		else {
+		} else {
 			floodMsgCount = 0;
 		}
 		lastMsgTime = System.currentTimeMillis();
@@ -2385,8 +2335,7 @@ public class Player extends Creature {
 
 		if (maxCountEvent.get(itemId) != null) {
 			maxCountEvent.get(itemId).setThisCount(thisCount);
-		}
-		else {
+		} else {
 			maxCountEvent.put(itemId, new MaxCountOfDay(thisCount));
 		}
 	}
@@ -2434,8 +2383,7 @@ public class Player extends Creature {
 			List<House> found = HousingService.getInstance().searchPlayerHouses(this.getObjectId());
 			if (found.size() > 0) {
 				houses = found;
-			}
-			else {
+			} else {
 				return found;
 			}
 		}
@@ -2576,8 +2524,7 @@ public class Player extends Creature {
 	public boolean banFromWorld(String by, String reason, long duration) {
 		if (isBannedFromWorld()) {
 			return false;
-		}
-		else {
+		} else {
 			bannedFromWorld = true;
 			bannedFromWorldDate = Calendar.getInstance().getTime();
 			bannedFromWorldDuring = duration;
@@ -2673,8 +2620,7 @@ public class Player extends Creature {
 		long elapsed = 0;
 		if (bannedFromWorldDuring == 0) {
 			return "indetermin?";
-		}
-		else {
+		} else {
 			elapsed = bannedFromWorldDuring - (Calendar.getInstance().getTimeInMillis() - bannedFromWorldDate.getTime());
 			return HumanTime.approximately(elapsed - (elapsed % 1000));
 		}
@@ -2872,16 +2818,15 @@ public class Player extends Creature {
 	}
 
 	public void setBonusTimeStatus() {
-//		Timestamp tm = getClientConnection().getAccount().getPlayerAccountData(getObjectId()).getPlayerCommonData().getLastOnline();
-//		long lastOnlineTimeDay = (System.currentTimeMillis() - tm.getTime()) / 24 / 60 / 60 / 1000;
+		//		Timestamp tm = getClientConnection().getAccount().getPlayerAccountData(getObjectId()).getPlayerCommonData().getLastOnline();
+		//		long lastOnlineTimeDay = (System.currentTimeMillis() - tm.getTime()) / 24 / 60 / 60 / 1000;
 		long t = (System.currentTimeMillis() - getCommonData().getCreationDate().getTime()) / 24 / 60 / 60 / 1000;
 		long bonus_time = getBonusTime().getTime() != null ? System.currentTimeMillis() - getBonusTime().getTime().getTime() : 0;
 		boolean bonus_comeback = System.currentTimeMillis() < bonus_time;
 		setCreationDataDay(t);
 		if (t <= 3L) {
 			setNew(true);
-		}
-		else {
+		} else {
 			setNew(false);
 		}
 		if (getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN && bonus_comeback || getBonusTime().getStatus() == PlayerBonusTimeStatus.NEW && t <= 30) {
@@ -2890,8 +2835,7 @@ public class Player extends Creature {
 
 		if (t <= 30L) {
 			getBonusTime().setStatus(PlayerBonusTimeStatus.NEW);
-		}
-		else {
+		} else {
 			getBonusTime().setStatus(PlayerBonusTimeStatus.NORMAL);
 		}
 
@@ -2903,7 +2847,7 @@ public class Player extends Creature {
 
 	/**
 	 * Membership of this player
-	 * 
+	 *
 	 * @return
 	 */
 	public byte getMembership() {
@@ -3097,8 +3041,7 @@ public class Player extends Creature {
 	public void setLunaAccount(long luna) {
 		if (LoginServer.getInstance().sendPacket(new SM_ACCOUNT_TOLL_INFO(1, this.getClientConnection().getAccount().getToll(), luna, this.getAcountName()))) {
 			this.getClientConnection().getAccount().setLuna(luna);
-		}
-		else
+		} else
 			PacketSendUtility.sendMessage(this, "ls communication error.");
 	}
 
@@ -3117,40 +3060,40 @@ public class Player extends Creature {
 	/**
 	 * Monsterbook
 	 */
-    public PlayerMonsterbookList getMonsterbook() {
-        return this.monsterbook;
-    }
-    
-    public void setMonsterbook(final PlayerMonsterbookList monsterbook) {
-        this.monsterbook = monsterbook;
-    }
+	public PlayerMonsterbookList getMonsterbook() {
+		return this.monsterbook;
+	}
+
+	public void setMonsterbook(final PlayerMonsterbookList monsterbook) {
+		this.monsterbook = monsterbook;
+	}
 
 	/**
 	 * Tower of Challenge
 	 */
-    public void setFloor(final int floor) {
-        this.getCommonData().setFloor(floor);
-    }
-    
-    public int getFloor() {
-        return this.getCommonData().getFloor();
-    }
+	public void setFloor(final int floor) {
+		this.getCommonData().setFloor(floor);
+	}
+
+	public int getFloor() {
+		return this.getCommonData().getFloor();
+	}
 
 	public int getMinionSkillPoints() {
 		return this.getCommonData().getMinionSkillPoints();
 	}
-	
+
 	public void setMinionSkillPoints(int minionSkillPoints) {
 		this.getCommonData().setMinionSkillPoints(minionSkillPoints);
 	}
-	
+
 	/**
 	 * Luna Dice Game
 	 */
 	public int getLunaDiceGame() {
 		return this.LunaDiceGame;
 	}
-	
+
 	public void setLunaDiceGame(int dice, boolean reset) {
 		if (!reset) {
 			if (dice > this.LunaDiceGame) {
@@ -3162,25 +3105,34 @@ public class Player extends Creature {
 			this.LunaDiceGame = dice;
 		}
 	}
-	
+
 	public int getLunaDiceGameTry() {
 		return this.LunaDiceGameTry;
 	}
-	
+
 	public void setLunaDiceGameTry(int dice) {
 		this.LunaDiceGameTry = dice;
 	}
 
+	public void setSpecialKills(int specialKills) {
+		this.specialKills = specialKills;
+	}
+
+	public int getSpecialKills() {
+		return specialKills;
+	}
+
+
 	/**
 	 * Equipment Setting
 	 */
-    public EquipmentSettingList getEquipmentSettingList() {
-        return equipmentSettingList;
-    }
-    
-    public void setEquipmentSettingList(EquipmentSettingList equipmentSettingList) {
-        this.equipmentSettingList = equipmentSettingList;
-    }
+	public EquipmentSettingList getEquipmentSettingList() {
+		return equipmentSettingList;
+	}
+
+	public void setEquipmentSettingList(EquipmentSettingList equipmentSettingList) {
+		this.equipmentSettingList = equipmentSettingList;
+	}
 
 	/**
 	 * Skill Skin List
@@ -3192,5 +3144,67 @@ public class Player extends Creature {
 	public void setSkillSkinList(SkillSkinList skillSkinList) {
 		this.skillSkinList = skillSkinList;
 		skillSkinList.setOwner(this);
+	}
+
+	public boolean isInFFA() {
+		return isInFFA;
+	}
+
+	public void setInFFA(boolean isInFFA) {
+		this.isInFFA = isInFFA;
+	}
+
+	public void setKSLevel(int ksLevel) {
+		KSLevel = ksLevel;
+	}
+
+	public int getKSLevel() {
+		return KSLevel;
+	}
+
+	public boolean isInPkMode() {
+		return isInPkMode;
+	}
+
+	public void setInPkMode(boolean isInPkMode) {
+		this.isInPkMode = isInPkMode;
+	}
+
+	public void setInDuelArena(boolean isDuelArena) {
+		this.isInDuelArena = isDuelArena;
+	}
+
+	public boolean isInDuelArena() {
+		return isInDuelArena;
+	}
+
+	public boolean isArenaTie() {
+		return arenaTie;
+	}
+
+	public void setArenaTie(boolean isTie) {
+		this.arenaTie = isTie;
+	}
+
+	public void setWinCount(int winCount) {
+		this.winCount = winCount;
+	}
+
+	public int getWinCount() {
+		return winCount;
+	}
+	public void setArenaRound(int round){
+		this.arenaRound = round;
+	}
+
+	public int getArenaRound(){
+		return arenaRound;
+	}
+	public int getArenaCode(){
+		return arenaCode;
+	}
+
+	public void setArenaCode(int arenaCode){
+		this.arenaCode = arenaCode;
 	}
 }

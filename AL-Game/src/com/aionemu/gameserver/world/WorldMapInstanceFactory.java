@@ -33,6 +33,19 @@ public class WorldMapInstanceFactory {
 		return createWorldMapInstance(parent, instanceId, 0);
 	}
 
+
+	public static WorldMapInstance createEventWorldMapInstance(WorldMap parent, int instanceId, int eventHandlerId) {
+		WorldMapInstance worldMapInstance = null;
+		if (parent.getMapId() == WorldMapType.RESHANTA.getId()) {
+			worldMapInstance = new WorldMap3DInstance(parent, instanceId);
+		} else {
+			worldMapInstance = new WorldMap2DInstance(parent, instanceId, 0);
+		}
+		InstanceHandler instanceHandler = InstanceEngine.getInstance().getNewEventInstanceHandler(eventHandlerId);
+		worldMapInstance.setInstanceHandler(instanceHandler);
+		return worldMapInstance;
+	}
+
 	public static WorldMapInstance createWorldMapInstance(WorldMap parent, int instanceId, int ownerId) {
 		WorldMapInstance worldMapInstance = null;
 		if (parent.getMapId() == WorldMapType.RESHANTA.getId() && parent.getMapId() == WorldMapType.BELUS.getId() && parent.getMapId() == WorldMapType.ASPIDA.getId() && parent.getMapId() == WorldMapType.ATANATOS.getId() && parent.getMapId() == WorldMapType.DISILLON.getId()) {

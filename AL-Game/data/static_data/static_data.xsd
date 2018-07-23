@@ -114,6 +114,7 @@
 	<xs:include schemaLocation="events_window/events_window.xsd"/>
 	<xs:include schemaLocation="items/item_skill_enhances.xsd"/>
 	<xs:include schemaLocation="shugo_sweep.xsd"/>
+    <xs:include schemaLocation="f14_events/events.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -232,6 +233,7 @@
 				<xs:element ref="events_window" minOccurs="0"/>
 				<xs:element ref="item_skill_enhances" minOccurs="0"/>
 				<xs:element ref="shugo_sweeps" minOccurs="0"/>
+                <xs:element ref="events" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
