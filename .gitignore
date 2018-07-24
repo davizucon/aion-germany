@@ -22,6 +22,7 @@ AL-Game/.idea/*
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 *.iml
 *.eml
 AL-Game/cache/
@@ -29,3 +30,22 @@ AL-Game/build/
 al_server_gs.sql
 al_server_ls.sql
 AL-Game/.idea
+=======
+
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
+
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
+>>>>>>> master
