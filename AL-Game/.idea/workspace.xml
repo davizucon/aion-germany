@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="743319d8-9d4d-46bf-9158-68d152cf1140" name="Default" comment="fix">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sql/updates/all_updates.sql" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/main/craft.properties" afterPath="$PROJECT_DIR$/config/main/craft.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/custom.properties" afterPath="$PROJECT_DIR$/config/main/custom.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/drop.properties" afterPath="$PROJECT_DIR$/config/main/drop.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/dualbox.properties" afterPath="$PROJECT_DIR$/config/main/dualbox.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/fasttrack.properties" afterPath="$PROJECT_DIR$/config/main/fasttrack.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/gameserver.properties" afterPath="$PROJECT_DIR$/config/main/gameserver.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/highdaeva.properties" afterPath="$PROJECT_DIR$/config/main/highdaeva.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/housing.properties" afterPath="$PROJECT_DIR$/config/main/housing.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/html.properties" afterPath="$PROJECT_DIR$/config/main/html.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/membership.properties" afterPath="$PROJECT_DIR$/config/main/membership.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/punishment.properties" afterPath="$PROJECT_DIR$/config/main/punishment.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/rates.properties" afterPath="$PROJECT_DIR$/config/main/rates.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/security.properties" afterPath="$PROJECT_DIR$/config/main/security.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/siege.properties" afterPath="$PROJECT_DIR$/config/main/siege.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/weddings.properties" afterPath="$PROJECT_DIR$/config/main/weddings.properties" />
-      <change beforePath="$PROJECT_DIR$/config/main/world.properties" afterPath="$PROJECT_DIR$/config/main/world.properties" />
-      <change beforePath="$PROJECT_DIR$/config/network/database.properties" afterPath="$PROJECT_DIR$/config/network/database.properties" />
-      <change beforePath="$PROJECT_DIR$/config/network/ipconfig.xml" afterPath="$PROJECT_DIR$/config/network/ipconfig.xml" />
-      <change beforePath="$PROJECT_DIR$/config/network/network.properties" afterPath="$PROJECT_DIR$/config/network/network.properties" />
-      <change beforePath="$PROJECT_DIR$/dist/PanelGS.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StartGS.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StartGS.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StartGS2048.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StartGS_8G.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StartGS_loop.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/StopGS.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/initialize.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql" afterPath="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql" />
+      <change beforePath="$PROJECT_DIR$/config/administration/developer.properties" afterPath="$PROJECT_DIR$/config/administration/developer.properties" />
       <change beforePath="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql" afterPath="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql" />
-      <change beforePath="$PROJECT_DIR$/sql/Old DB old updates needed/al_server_gs.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/sql/updates/EquipmentSetting - 24.01.2018.sql" afterPath="$PROJECT_DIR$/sql/updates/EquipmentSetting - 24.01.2018.sql" />
       <change beforePath="$PROJECT_DIR$/../AL-Login/.classpath" afterPath="$PROJECT_DIR$/../AL-Login/.classpath" />
       <change beforePath="$PROJECT_DIR$/../AL-Login/config/network/database.properties" afterPath="$PROJECT_DIR$/../AL-Login/config/network/database.properties" />
       <change beforePath="$PROJECT_DIR$/../AL-Login/data/scripts/system/database.xml" afterPath="$PROJECT_DIR$/../AL-Login/data/scripts/system/database.xml" />
@@ -91,48 +64,79 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="mysql_aion-localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="al_server_ls: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="al_server_gs: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="player_minions: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console.sql">
+      <file leaf-file-name="F2p Update - 25.05.2018.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/F2p Update - 25.05.2018.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="1587" column="31" lean-forward="true" selection-start-line="1587" selection-start-column="31" selection-end-line="1587" selection-end-column="31" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_1.sql">
+      <file leaf-file-name="all_updates.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sql/updates/all_updates.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="150">
+              <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameserver.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/main/gameserver.properties">
+      <file leaf-file-name="player_skill_skins08.06.2018.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/player_skill_skins08.06.2018.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="131" column="37" lean-forward="false" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="al_server_gs.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql">
+      <file leaf-file-name="RemoveSkillAnimationfromPlayerSkillsDb.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/RemoveSkillAnimationfromPlayerSkillsDb.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="946" column="0" lean-forward="true" selection-start-line="938" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player_events_window21.07.18.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/player_events_window21.07.18.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player_shugo_sweep-7-19-2018.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/player_shugo_sweep-7-19-2018.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player_events_window14.07.2018.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/updates/player_events_window14.07.2018.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="76" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -153,7 +157,6 @@
       <find>MySQL5PlayerMinionsDAO.java</find>
       <find>is_locked</find>
       <find>e</find>
-      <find>inventory</find>
       <find>enhanceSkillId</find>
       <find>inveto</find>
       <find>isEnhance</find>
@@ -164,8 +167,15 @@
       <find>events</find>
       <find>Can't insert into events window</find>
       <find>player_events_windo</find>
-      <find>player_events_window</find>
       <find>= 20</find>
+      <find>reward_recived_count</find>
+      <find>player_events_window</find>
+      <find>inventory</find>
+      <find>quit</find>
+      <find>exit</find>
+      <find>10</find>
+      <find>siel</find>
+      <find>ALTER TABLE `player_minions` ADD COLUMN growthpoints INT(6) NOT NULL AFTER `birthday`;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -199,14 +209,25 @@
         <option value="$PROJECT_DIR$/config/main/membership.properties" />
         <option value="$PROJECT_DIR$/config/main/dualbox.properties" />
         <option value="$PROJECT_DIR$/config/network/ipconfig.xml" />
-        <option value="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql" />
         <option value="$PROJECT_DIR$/config/network/network.properties" />
         <option value="$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5PlayerTransformationDAO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_1.sql" />
-        <option value="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console.sql" />
         <option value="$PROJECT_DIR$/config/main/gameserver.properties" />
+        <option value="$PROJECT_DIR$/sql/updates/player_skill_skins08.06.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/player_events_window08.06.2018.sql" />
+        <option value="$PROJECT_DIR$/config/administration/developer.properties" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console.sql" />
+        <option value="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql" />
+        <option value="$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/EquipmentSetting - 24.01.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/Minion Update 21.02.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/Minion Update 01.02.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/MinionGrowth - 21.01.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/MinionGrowPointsFix - 06.02.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/skill_enhance19.06.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/player_events_window14.07.2018.sql" />
+        <option value="$PROJECT_DIR$/sql/updates/all_updates.sql" />
       </list>
     </option>
   </component>
@@ -217,8 +238,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="35" />
-    <option name="y" value="128" />
+    <option name="y" value="33" />
     <option name="width" value="1920" />
     <option name="height" value="1178" />
   </component>
@@ -239,22 +259,13 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
               <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
@@ -277,40 +288,23 @@
               <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
               <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="updates" type="462c0819:PsiDirectoryNode" />
+              <item name="Old-2017" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AL-Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gameserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gameserver" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AL-Game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AL-Game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gameserver" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="AL-Login" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,7 +481,8 @@
       <workItem from="1532134119325" duration="5844000" />
       <workItem from="1532145395178" duration="3466000" />
       <workItem from="1532215780892" duration="7056000" />
-      <workItem from="1532291545831" duration="8626000" />
+      <workItem from="1532291545831" duration="15097000" />
+      <workItem from="1532314916333" duration="1369000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1532216094190</created>
@@ -496,14 +491,22 @@
       <option name="project" value="LOCAL" />
       <updated>1532216094190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix">
+      <created>1532306016966</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532306016966</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24992000" />
+    <option name="totallyTimeSpent" value="32832000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1178" extended-state="6" />
+    <frame x="0" y="29" width="1920" height="1178" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -513,27 +516,27 @@
       <window_info id="JWT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Connector for AWS Lambda" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23880596" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39981532" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39981532" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,426 +589,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../AL-Login/config/network/network.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AL-Login/config/network/svstats.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/world.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/security.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/dualbox.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/network/ipconfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_gs.players">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_gs.account_data">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/craft.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/custom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/fasttrack.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/name.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/membership.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/siege.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/html.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/lunasystem.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AL-Login/sql/al_server_ls.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="181" column="29" lean-forward="true" selection-start-line="181" selection-start-column="29" selection-end-line="181" selection-end-column="29" />
-          <folding>
-            <marker date="1531961440070" expanded="true" signature="127:162" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="164:1190" ph="CREATE TABLE... account_data" />
-            <marker date="1531961440070" expanded="true" signature="1389:1428" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="1430:1722" ph="CREATE TABLE... account_playtime" />
-            <marker date="1531961440070" expanded="true" signature="1924:1962" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="1964:2471" ph="CREATE TABLE... account_rewards" />
-            <marker date="1531961440070" expanded="true" signature="2669:2704" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="2706:3256" ph="CREATE TABLE... account_time" />
-            <marker date="1531961440070" expanded="true" signature="3448:3480" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="3482:3709" ph="CREATE TABLE... banned_ip" />
-            <marker date="1531961440070" expanded="true" signature="3899:3932" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="3934:4232" ph="CREATE TABLE... banned_mac" />
-            <marker date="1531961440070" expanded="true" signature="4424:4458" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="4460:4669" ph="CREATE TABLE... gameservers" />
-            <marker date="1531961440070" expanded="true" signature="4762:4813" ph="INSERT INTO `gameservers`... " />
-            <marker date="1531961440070" expanded="true" signature="4920:4959" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="4961:5473" ph="CREATE TABLE... player_transfers" />
-            <marker date="1531961440070" expanded="true" signature="5667:5697" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="5699:5983" ph="CREATE TABLE... svstats" />
-            <marker date="1531961440070" expanded="true" signature="6166:6194" ph="DROP TABLE I... " />
-            <marker date="1531961440070" expanded="true" signature="6196:6502" ph="CREATE TABLE... tasks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AL-Chat/dist/StartCS.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AL-Login/config/network/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AL-Chat/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="401" column="37" lean-forward="false" selection-start-line="401" selection-start-column="37" selection-end-line="401" selection-end-column="37" />
-          <folding>
-            <marker date="1532299789209" expanded="true" signature="130:166" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="168:764" ph="CREATE TABLE... abyss_landing" />
-            <marker date="1532299789209" expanded="true" signature="960:993" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="995:1902" ph="CREATE TABLE... abyss_rank" />
-            <marker date="1532299789209" expanded="true" signature="2098:2134" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="2136:2486" ph="CREATE TABLE... announcements" />
-            <marker date="1532299789209" expanded="true" signature="2682:2715" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="2717:3018" ph="CREATE TABLE... banned_hdd" />
-            <marker date="1532299789209" expanded="true" signature="3214:3250" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="3252:3416" ph="CREATE TABLE... base_location" />
-            <marker date="1532299789209" expanded="true" signature="3608:3637" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="3639:4137" ph="CREATE TABLE... blocks" />
-            <marker date="1532299789209" expanded="true" signature="4324:4355" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="4357:4642" ph="CREATE TABLE... bookmark" />
-            <marker date="1532299789209" expanded="true" signature="4829:4858" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="4860:5690" ph="CREATE TABLE... broker" />
-            <marker date="1532299789209" expanded="true" signature="5884:5922" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="5924:6297" ph="CREATE TABLE... challenge_tasks" />
-            <marker date="1532299789209" expanded="true" signature="6500:6538" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="6540:6876" ph="CREATE TABLE... craft_cooldowns" />
-            <marker date="1532299789209" expanded="true" signature="7075:7109" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="7111:7439" ph="CREATE TABLE... event_items" />
-            <marker date="1532299789209" expanded="true" signature="7633:7666" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="7668:7819" ph="CREATE TABLE... f2paccount" />
-            <marker date="1532299789209" expanded="true" signature="8009:8039" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="8041:8493" ph="CREATE TABLE... friends" />
-            <marker date="1532299789209" expanded="true" signature="8679:8708" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="8710:9082" ph="CREATE TABLE... guides" />
-            <marker date="1532299789209" expanded="true" signature="9273:9308" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="9310:9769" ph="CREATE TABLE... guild_quests" />
-            <marker date="1532299789209" expanded="true" signature="9960:9989" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="9991:10691" ph="CREATE TABLE... houses" />
-            <marker date="1532299789209" expanded="true" signature="10880:10913" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="10915:11329" ph="CREATE TABLE... house_bids" />
-            <marker date="1532299789209" expanded="true" signature="11534:11579" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="11581:11797" ph="CREATE TABLE... house_object_cooldowns" />
-            <marker date="1532299789209" expanded="true" signature="12005:12041" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="12043:12391" ph="CREATE TABLE... house_scripts" />
-            <marker date="1532299789209" expanded="true" signature="12586:12618" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="12620:14232" ph="CREATE TABLE... inventory" />
-            <marker date="1532299789209" expanded="true" signature="14426:14463" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="14465:14840" ph="CREATE TABLE... item_cooldowns" />
-            <marker date="1532299789209" expanded="true" signature="15038:15072" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="15074:15545" ph="CREATE TABLE... item_stones" />
-            <marker date="1532299789209" expanded="true" signature="15736:15766" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="15768:16678" ph="CREATE TABLE... legions" />
-            <marker date="1532299789209" expanded="true" signature="16882:16929" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="16931:17306" ph="CREATE TABLE... legion_announcement_list" />
-            <marker date="1532299789209" expanded="true" signature="17517:17554" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="17556:18073" ph="CREATE TABLE... legion_emblems" />
-            <marker date="1532299789209" expanded="true" signature="18274:18311" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="18313:19016" ph="CREATE TABLE... legion_history" />
-            <marker date="1532299789209" expanded="true" signature="19223:19266" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="19268:19807" ph="CREATE TABLE... legion_join_requests" />
-            <marker date="1532299789209" expanded="true" signature="20014:20051" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="20053:20777" ph="CREATE TABLE... legion_members" />
-            <marker date="1532299789209" expanded="true" signature="20968:20995" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="20997:21700" ph="CREATE TABLE... mail" />
-            <marker date="1532299789209" expanded="true" signature="21888:21922" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="21924:22218" ph="CREATE TABLE... network_ban" />
-            <marker date="1532299789209" expanded="true" signature="22411:22443" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="22445:22697" ph="CREATE TABLE... old_names" />
-            <marker date="1532299789209" expanded="true" signature="22888:22920" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="22922:23296" ph="CREATE TABLE... petitions" />
-            <marker date="1532299789209" expanded="true" signature="23485:23515" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="23517:26537" ph="CREATE TABLE... players" />
-            <marker date="1532299789209" expanded="true" signature="26734:26774" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="26776:29000" ph="CREATE TABLE... player_appearance" />
-            <marker date="1532299789209" expanded="true" signature="29207:29247" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="29249:29617" ph="CREATE TABLE... player_bind_point" />
-            <marker date="1532299789209" expanded="true" signature="29823:29862" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="29864:30190" ph="CREATE TABLE... player_cooldowns" />
-            <marker date="1532299789209" expanded="true" signature="30388:30420" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="30422:30729" ph="CREATE TABLE... player_cp" />
-            <marker date="1532299789209" expanded="true" signature="30925:30962" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="30964:31366" ph="CREATE TABLE... player_effects" />
-            <marker date="1532299789209" expanded="true" signature="31568:31606" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="31608:31950" ph="CREATE TABLE... player_emotions" />
-            <marker date="1532299789209" expanded="true" signature="32155:32195" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="32197:33567" ph="CREATE TABLE... player_game_stats" />
-            <marker date="1532299789209" expanded="true" signature="33774:33814" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="33816:34167" ph="CREATE TABLE... player_life_stats" />
-            <marker date="1532299789209" expanded="true" signature="34373:34412" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="34414:34655" ph="CREATE TABLE... player_luna_shop" />
-            <marker date="1532299789209" expanded="true" signature="34860:34899" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="34901:35227" ph="CREATE TABLE... player_macrosses" />
-            <marker date="1532299789209" expanded="true" signature="35430:35467" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="35469:35844" ph="CREATE TABLE... player_minions" />
-            <marker date="1532299789209" expanded="true" signature="36049:36090" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="36092:36490" ph="CREATE TABLE... player_monsterbook" />
-            <marker date="1532299789209" expanded="true" signature="36695:36732" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="36734:37127" ph="CREATE TABLE... player_motions" />
-            <marker date="1532299789209" expanded="true" signature="37333:37375" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="37377:37860" ph="CREATE TABLE... player_npc_factions" />
-            <marker date="1532299789209" expanded="true" signature="38066:38103" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="38105:38290" ph="CREATE TABLE... player_passkey" />
-            <marker date="1532299789209" expanded="true" signature="38493:38532" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="38534:38920" ph="CREATE TABLE... player_passports" />
-            <marker date="1532299789209" expanded="true" signature="39120:39154" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="39156:40040" ph="CREATE TABLE... player_pets" />
-            <marker date="1532299789209" expanded="true" signature="40242:40283" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="40285:40736" ph="CREATE TABLE... player_punishments" />
-            <marker date="1532299789209" expanded="true" signature="40940:40976" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="40978:41588" ph="CREATE TABLE... player_quests" />
-            <marker date="1532299789209" expanded="true" signature="41788:41825" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="41827:42127" ph="CREATE TABLE... player_recipes" />
-            <marker date="1532299789209" expanded="true" signature="42337:42383" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="42385:43225" ph="CREATE TABLE... player_registered_items" />
-            <marker date="1532299789209" expanded="true" signature="43436:43474" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="43476:43803" ph="CREATE TABLE... player_settings" />
-            <marker date="1532299789209" expanded="true" signature="44004:44040" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="44042:44466" ph="CREATE TABLE... player_skills" />
-            <marker date="1532299789209" expanded="true" signature="44665:44701" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="44703:45043" ph="CREATE TABLE... player_titles" />
-            <marker date="1532299789209" expanded="true" signature="45250:45294" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="45296:45515" ph="CREATE TABLE... player_transformation" />
-            <marker date="1532299789209" expanded="true" signature="45720:45754" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="45756:46120" ph="CREATE TABLE... player_vars" />
-            <marker date="1532299789209" expanded="true" signature="46319:46357" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="46359:46731" ph="CREATE TABLE... player_wardrobe" />
-            <marker date="1532299789209" expanded="true" signature="46936:46976" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="46978:47231" ph="CREATE TABLE... player_world_bans" />
-            <marker date="1532299789209" expanded="true" signature="47437:47476" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="47478:47849" ph="CREATE TABLE... portal_cooldowns" />
-            <marker date="1532299789209" expanded="true" signature="48054:48093" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="48095:48249" ph="CREATE TABLE... server_variables" />
-            <marker date="1532299789209" expanded="true" signature="48453:48491" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="48493:48732" ph="CREATE TABLE... siege_locations" />
-            <marker date="1532299789209" expanded="true" signature="48932:48967" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="48969:49349" ph="CREATE TABLE... siege_spawns" />
-            <marker date="1532299789209" expanded="true" signature="49547:49583" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="49585:49977" ph="CREATE TABLE... skill_motions" />
-            <marker date="1532299789209" expanded="true" signature="50169:50198" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="50200:51017" ph="CREATE TABLE... spawns" />
-            <marker date="1532299789209" expanded="true" signature="51211:51249" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="51251:51404" ph="CREATE TABLE... special_landing" />
-            <marker date="1532299789209" expanded="true" signature="51599:51629" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="51631:52204" ph="CREATE TABLE... surveys" />
-            <marker date="1532299789209" expanded="true" signature="52389:52417" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="52419:52677" ph="CREATE TABLE... tasks" />
-            <marker date="1532299789209" expanded="true" signature="52860:52888" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="52890:53185" ph="CREATE TABLE... towns" />
-            <marker date="1532299789209" expanded="true" signature="53373:53406" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="53408:53914" ph="CREATE TABLE... web_reward" />
-            <marker date="1532299789209" expanded="true" signature="54105:54136" ph="DROP TABLE I... " />
-            <marker date="1532299789209" expanded="true" signature="54138:54640" ph="CREATE TABLE... weddings" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5InventoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="56" column="69" lean-forward="false" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="69" />
-          <folding>
-            <marker date="1531961437251" expanded="true" signature="2692:3259" ph="INSERT INTO `inventory`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5HouseObjectCooldownsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <marker date="1531961437250" expanded="true" signature="1454:1546" ph="INSERT INTO `house_object_cooldowns`... " />
-            <marker date="1531961437250" expanded="true" signature="1593:1649" ph="DELETE FROM `house_object_cooldowns`... " />
-            <marker date="1531961437250" expanded="true" signature="1696:1778" ph="SELECT `obje... house_object_cooldowns" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/administration/developer.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/administration/item.restriction.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/administration/pff.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/administration/admin.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1412">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/network/network.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/network/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_ls.account_data">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5Free2PlayDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="44" column="59" lean-forward="true" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-          <folding>
-            <marker date="1531961437249" expanded="true" signature="1468:1613" ph="INSERT INTO `f2paccount`... " />
-            <marker date="1531961437249" expanded="true" signature="1660:1712" ph="SELECT `time... f2paccount" />
-            <marker date="1531961437249" expanded="true" signature="1759:1804" ph="DELETE FROM `f2paccount`... " />
-            <marker date="1531961437249" expanded="true" signature="1851:1904" ph="UPDATE `f2paccount`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,18 +614,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/Old DB old updates needed/al_server_gs.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/Old DB old updates needed/al_server_gs.sql" />
     <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_gs.player_events_window">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1051,9 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="88" column="14" lean-forward="true" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
-          <folding>
-            <marker date="1531961437254" expanded="true" signature="1712:1826" ph="INSERT INTO `player_effects`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1064,27 +639,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/updates/EquipmentSetting - 24.01.2018.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/updates/F2p Update - 25.05.2018.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,6 +650,230 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/events/EventWindowService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5PlayerTransformationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/main/gameserver.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="125" column="30" lean-forward="true" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_ls.player_transfers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_ls.svstats">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/administration/developer.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_ls.account_data">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/administration/pff.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/administration/item.restriction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/administration/commands.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2945">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/administration/admin.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/schedule/rift_schedule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/schedule/rift_schedule.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/schedule/siege_schedule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/spawns/Instances/300520000_Dragon_Lords_Refuge.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/network/network.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="50" column="76" lean-forward="true" selection-start-line="50" selection-start-column="76" selection-end-line="50" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/network/ipconfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AL-Login/sql/al_server_ls.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="158" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/Clean 5.6 DB with all updates before 2018/al_server_gs.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="1478" column="34" lean-forward="true" selection-start-line="1478" selection-start-column="34" selection-end-line="1478" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_5.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="1597" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="1597" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/dee91586/86f6588b-5248-4f72-91aa-54b76e85cc6c/al_server_gs.player_minions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/MinionGrowth - 21.01.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/MinionGrowPointsFix - 06.02.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="75" lean-forward="false" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/Minion Update 21.02.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/Minion Update 01.02.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="98" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/MinionIsLockedFix14.05.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="103" />
           <folding />
         </state>
       </provider>
@@ -1099,15 +881,7 @@
     <entry file="file://$PROJECT_DIR$/sql/updates/skill_enhance19.06.2018.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/updates/player_events_window14.07.2018.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1120,55 +894,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/events/EventWindowService.java">
+    <entry file="file://$PROJECT_DIR$/sql/updates/player_shugo_sweep-7-19-2018.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5PlayerTransformationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <marker date="1531961437258" expanded="true" signature="1467:1554" ph="INSERT INTO `player_transformation`... " />
-            <marker date="1531961437258" expanded="true" signature="1705:1760" ph="DELETE FROM `player_transformation`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/Clean 5.6 DB with all updates 30.06.18/al_server_gs.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="946" column="0" lean-forward="true" selection-start-line="938" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console.sql">
+    <entry file="file://$PROJECT_DIR$/sql/updates/player_events_window14.07.2018.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="1587" column="31" lean-forward="true" selection-start-line="1587" selection-start-column="31" selection-end-line="1587" selection-end-column="31" />
+        <state relative-caret-position="15">
+          <caret line="1" column="76" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86f6588b-5248-4f72-91aa-54b76e85cc6c/console_1.sql">
+    <entry file="file://$PROJECT_DIR$/sql/updates/player_events_window21.07.18.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="15">
+          <caret line="1" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/main/gameserver.properties">
+    <entry file="file://$PROJECT_DIR$/sql/updates/RemoveSkillAnimationfromPlayerSkillsDb.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="131" column="37" lean-forward="false" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
+        <state relative-caret-position="15">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/player_skill_skins08.06.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/EquipmentSetting - 24.01.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="44" column="110" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="44" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/F2p Update - 25.05.2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/updates/all_updates.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
           <folding />
         </state>
       </provider>

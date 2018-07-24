@@ -35,3 +35,11 @@ CREATE TABLE `player_equipment_setting` (
 -- ----------------------------
 -- Records of player_equipment_setting
 -- ----------------------------
+
+ALTER TABLE `player_minions` MODIFY COLUMN `birthday` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `level`;
+ALTER TABLE `player_minions` ADD COLUMN is_locked INT(1) NOT NULL AFTER `growthpoints`;
+ALTER TABLE `player_minions` ADD COLUMN buff_bag VARCHAR(255) NULL DEFAULT NULL AFTER `is_locked`;
+
+
+
+ALTER TABLE `players` ADD COLUMN minion_function_time timestamp NULL DEFAULT NULL AFTER `minion_skill_points`;

@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry excluding="data/**" kind="src" path="src"/>
 	<classpathentry kind="src" path="data/scripts/system/database"/>
+	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/bonecp-0.7.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="libs/c3p0-0.9.1.1.jar"/>
