@@ -15,7 +15,7 @@
 	along with aion-lightning.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-<ipconfig default="127.0.0.1"> 
+<ipconfig default="201.28.121.129">
 <!--
 	<iprange min="10.0.0.0" max="10.255.255.255" address="10.0.0.0"/>
 	<iprange min="172.16.0.0" max="172.31.255.255" address="172.16.0.0"/>
