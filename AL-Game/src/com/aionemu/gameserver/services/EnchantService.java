@@ -247,6 +247,21 @@ public class EnchantService {
 			case 166010001: // 5.6 Shining Enchantment Stone
 				enchantStoneLevel = Rnd.get(150, 230);
 				break;
+			case 166023100: // 6.x Ancient PvE Enchantment Stone
+			case 166023103: // 6.x [Event] Ancient PvE Enchantment Stone
+			case 166023106: // 6.x Ancient PvE Enchantment Stone
+				enchantStoneLevel = Rnd.get(190, 270);
+				break;
+			case 166023101: // 6.x Legendary PvE Enchantment Stone
+			case 166023104: // 6.x [Event] Legendary PvE Enchantment Stone
+			case 166023107: // 6.x Legendary PvE Enchantment Stone
+				enchantStoneLevel = Rnd.get(220, 300);
+				break;
+			case 166023102: // 6.x Ultimate PvE Enchantment Stone
+			case 166023105: // 6.x [Event] Ultimate PvE Enchantment Stone
+			case 166023108: // 6.x [Rune] Ultimate PvE Enchantment Stone
+				enchantStoneLevel = Rnd.get(250, 330);
+				break;
 		}
 
 		// Extra success chance
@@ -326,9 +341,6 @@ public class EnchantService {
 		}
 		if (success >= 95) {
 			success = 95;
-		}
-		if (targetItem.isHighDaevaItem()) {
-			success = 75;
 		}
 		if (targetItem.getItemTemplate().isEstima()) { // TODO
 			success = 50;
@@ -480,10 +492,6 @@ public class EnchantService {
 			case 7:
 				number = Rnd.get(1000, 2000);
 				break;
-		}
-		// Extracting HighDaeva equipment will give Enchantment Stone Dust and HighDaeva crafting materials.
-		if (targetItem.isHighDaevaItem()) {
-			ItemService.addItem(player, RndArray.get(HighDaevaStoneItems), 1);
 		}
 		int enchantItemId = stone;
 		if (inventory.delete(targetItem) != null) {

@@ -63,11 +63,6 @@ public class EventsConfig {
 	@Property(key = "gameserver.event.service.enable", defaultValue = "false")
 	public static boolean ENABLE_EVENT_SERVICE;
 	/**
-	 * Atreian Passport
-	 */
-	@Property(key = "gameserver.atreian.passport.enable", defaultValue = "false")
-	public static boolean ENABLE_ATREIAN_PASSPORT;
-	/**
 	 * Arcade Event
 	 */
 	@Property(key = "gameserver.event.arcade.enable", defaultValue = "false")
@@ -91,6 +86,6 @@ public class EventsConfig {
 	@Property(key = "gameserver.event.shugoSweep.freeDice", defaultValue = "5")
 	public static int EVENT_SHUGOSWEEP_FREEDICE;
 	
-	@Property(key = "gameserver.event.youtube_video", defaultValue = "https://www.youtube.com/embed/3Agip7o-OO0?")
+	@Property(key = "gameserver.event.youtube_video", defaultValue = "https://www.youtube.com/embed/0_OzU6GVGLw")
 	public static String EVENT_YOUTUBE_VIDEO;
 }

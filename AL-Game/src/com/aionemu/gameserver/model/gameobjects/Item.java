@@ -214,12 +214,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	public boolean hasTune() {
-		// Way #1
-		// if (!this.itemTemplate.isWeapon() || !this.itemTemplate.isArmor()) {
-		// return false;
-		// }
-		// return getRandomCount() < this.itemTemplate.getRandomBonusCount() && !isEquipped();
-		// Way #2
 		if (getOptionalSocket() == -1) {
 			return true;
 		}
@@ -784,10 +778,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 
 	public boolean canAmplify() {
 		return (getItemMask() & ItemMask.CAN_AMPLIFICATION) == ItemMask.CAN_AMPLIFICATION;
-	}
-
-	public boolean isHighDaevaItem() {
-		return (getItemMask() & ItemMask.ITEM_HIGHDAEVA) == ItemMask.ITEM_HIGHDAEVA;
 	}
 
 	/**
